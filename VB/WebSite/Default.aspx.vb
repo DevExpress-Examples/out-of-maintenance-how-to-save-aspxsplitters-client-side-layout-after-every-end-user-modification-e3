@@ -10,8 +10,8 @@ Partial Public Class _Default
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
 
 	End Sub
-	Protected Sub ASPxSplitter1_ClientLayout(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxClasses.ASPxClientLayoutArgs)
-		If e.LayoutMode = DevExpress.Web.ASPxClasses.ClientLayoutMode.Saving Then
+	Protected Sub ASPxSplitter1_ClientLayout(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxClientLayoutArgs)
+		If e.LayoutMode = DevExpress.Web.ClientLayoutMode.Saving Then
 			Session("layoutData") = e.LayoutData
 		ElseIf Session("layoutData") IsNot Nothing Then
 			e.LayoutData = CStr(Session("layoutData"))
